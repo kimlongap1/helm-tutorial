@@ -19,7 +19,7 @@ Now let's try to update our Chart. (I included the updated chart under
 `part-05/templates/ghost`).
 
 ```
-helm upgrade blog ghost/
+helm upgrade blog ghost/ -n tools
 ```
 
 ```
@@ -138,7 +138,7 @@ For this use case Helm implemented a rollback function. We'll simply need to
 execute the following command:
 
 ```
-helm rollback blog 1
+helm rollback blog 1 -n tools
 ```
 
 ```
@@ -162,7 +162,7 @@ So that worked. We did successfully roll back our release. Let's clean up our
 blog.
 
 ```bash
-helm del blog --purge
+helm uninstall blog -n tools
 ```
 
 ```

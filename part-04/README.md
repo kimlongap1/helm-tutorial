@@ -374,7 +374,7 @@ the template to stdout instead of deploying it. This can be very helpful if
 you want to check if the templates render correctly.
 
 ```
-helm install --name blog --namespace=tools ./ghost --debug
+helm install  blog --namespace=tools ./ghost --debug
 ```
 
 ```
